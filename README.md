@@ -5,6 +5,8 @@ Written in Japanese.
 
 世の中にはたくさんの優れたサンプルがありますが、私も一つ書いてみました。
 
+- [参考ブログ](https://flogics.com/wp/ja/2021/05/presentation_by_pandoc_beamer/)
+
 ## 必要なツール
 
 - [Pandoc](https://pandoc.org/)
