@@ -195,6 +195,7 @@ Refer https://stackoverflow.com/questions/4823468/comments-in-markdown
 
   * アイテム1
   * アイテム2
+
 :::
 
 HTMLやLaTeXは面倒でも、これなら覚えられそうですね!
@@ -267,11 +268,15 @@ TeXShop | [https://pages.uoregon.edu/koch/texshop/](https://pages.uoregon.edu/ko
 ::: columns
 
 :::: column
+
 LaTeXの力を借りて、数式を入れることもできます!
+
 ::::
 
 :::: column
+
 $$F(s)=\int_0^\infty f(t)e^{-st}\,dt$$
+
 ::::
 
 :::
