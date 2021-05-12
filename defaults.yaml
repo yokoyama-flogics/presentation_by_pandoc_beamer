@@ -1,0 +1,28 @@
+# $ pandoc -d defaults.yaml
+
+# XXX The following description recognizes metadata.yaml as Markdown.
+# from: markdown_strict+raw_attribute
+from: markdown-implicit_figures
+to: beamer
+
+input-files:
+    - metadata.yaml
+    - slides.md
+
+output-file: slides.tex
+
+standalone: true
+pdf-engine: xelatex
+
+variables:
+    colorlinks: true
+    classoption:
+        # Beamer documentclass doesn't accept pandoc classoption.
+        # So we need bxjspandoc package in metadata.yaml.
+        # Regarding pandoc classoption,
+        # refer https://texwiki.texjp.org/?BXjscls#f45df5c0
+        # -pandoc
+        - unicode
+    theme: Copenhagen
+    colortheme: seahorse
+    institute: This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License}.\par\href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{\includegraphics[height=0.4cm]{image/by-nc-sa-4.0-88x31.png}}

@@ -1,0 +1,58 @@
+---
+title: Markdownでプレゼンテーションをしよう（Pandoc編）
+author:
+    - ファームロジックス　横山篤史（yokoyama@flogics.com）
+date: 2021年5月11日
+
+header-includes: |
+    ```{=latex}
+    \usepackage{zxjatype}
+    \usepackage[haranoaji]{zxjafont}
+    %
+    % Beamer documentclass doesn't accept pandoc classoption, so we need this.
+    % Refer https://ctan.math.washington.edu/tex-archive/language/japanese/BX/bxjscls/bxjscls.pdf for bxjspandoc
+    % bxjspandoc package avoids … is treated as \ldots.
+    \usepackage{bxjspandoc}
+    %
+    % Beamer settings
+    \setbeamertemplate{headline}[text line]{}
+    % Refer https://tex.stackexchange.com/questions/333587/beamer-frame-number-without-total
+    \setbeamertemplate{footline}{
+      \leavevmode\kern1em
+      \copyright{} 2021 \href{https://flogics.com}{Firmlogics}, \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{CC BY-NC-SA 4.0}
+      \hfill
+      \usebeamercolor[fg]{page number in head/foot}
+      \usebeamerfont{page number in head/foot}
+      \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt
+    }
+    \setbeamertemplate{navigation symbols}{}
+    \linespread{1.2}\selectfont
+    \titlegraphic{\vbox to 0pt{\includegraphics[height=0.5cm]{image/firmlogics_adjusted_transparent_320}\vss}}
+    % \setbeamerfont{institute}{size=\tiny}
+    %
+    % Centering \includegraphics
+    % Refer https://stackoverflow.com/questions/45378434/customizing-body-text-and-images-using-markdown-pandoc-beamer-to-create-pdf-sl
+    %   Save the meaning of \includegraphics
+    \LetLtxMacro\latexincludegraphics\includegraphics
+    %   Update the include graphics command to include centering
+    \renewcommand{\includegraphics}[2][]{%
+      \begin{center}
+        \latexincludegraphics[#1]{#2}
+      \end{center}}
+    %
+    % Change code blocks font size
+    % Also refer https://stackoverflow.com/questions/27000906/how-to-set-the-font-size-for-code-blocks-in-pandoc-markdown
+    %   For syntax highlighting
+    \renewenvironment{Shaded}{\footnotesize}{}
+    %   For no highlighting
+    %   Refer https://tex.stackexchange.com/questions/116670/duplicating-environments
+    \let\origVerbatim\verbatim
+    \let\origendverbatim\endverbatim
+    \renewenvironment{verbatim}{
+      \footnotesize
+      \begin{origVerbatim}
+    }{
+      \end{origVerbatim}
+    }
+    ```
+...

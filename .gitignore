@@ -1,0 +1,9 @@
+slides.tex
+*~
+*.aux
+*.log
+*.nav
+*.pdf
+*.snm
+*.toc
+*.vrb
