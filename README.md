@@ -1,6 +1,6 @@
-# Markdownでプレゼンテーションをしよう（Pandoc編）
+# Markdownでプレゼンテーションをしよう（Pandoc + Beamer編）
 
-(Yet another) how to create presentation slides by Markdown (Pandoc version).
+(Yet another) how to create presentation slides by Markdown (Pandoc + Beamer version).
 Written in Japanese.
 
 世の中にはたくさんの優れたサンプルがありますが、私も一つ書いてみました。
