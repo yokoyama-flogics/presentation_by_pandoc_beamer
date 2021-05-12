@@ -21,6 +21,10 @@ Written in Japanese.
 $ make
 ```
 
+## 入力ソースコード（Markdown形式）
+
+- [slides.md](slides.md)
+
 ## 出力例
 
 ### PDF
