@@ -22,6 +22,12 @@ $ make
 
 ## 出力例
 
+### PDF
+
+- [PDF slides](output/presentation_by_pandoc_beamer_slides.pdf)
+
+### PNG
+
 ![slide 0](output/presentation_by_pandoc_beamer_slide-00.png)
 ![slide 1](output/presentation_by_pandoc_beamer_slide-01.png)
 ![slide 2](output/presentation_by_pandoc_beamer_slide-02.png)

@@ -1,9 +1,12 @@
+./slides.pdf
 slides.tex
 *~
 *.aux
 *.log
 *.nav
-*.pdf
 *.snm
 *.toc
 *.vrb
+*.fdb_latexmk
+*.fls
+*.xdv
