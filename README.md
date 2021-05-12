@@ -1,6 +1,7 @@
 # Markdownでプレゼンテーションをしよう（Pandoc編）
 
-How to create presentation slides by Markdown (Pandoc version).  Written in Japanese.
+(Yet another) how to create presentation slides by Markdown (Pandoc version).
+Written in Japanese.
 
 世の中にはたくさんの優れたサンプルがありますが、私も一つ書いてみました。
 
