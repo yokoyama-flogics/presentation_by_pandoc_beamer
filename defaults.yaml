@@ -25,4 +25,5 @@ variables:
         - unicode
     theme: Copenhagen
     colortheme: seahorse
+    # navigation: frame
     institute: This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License}.\par\href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{\includegraphics[height=0.4cm]{image/by-nc-sa-4.0-88x31.png}}

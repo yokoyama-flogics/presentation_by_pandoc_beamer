@@ -25,7 +25,6 @@ header-includes: |
       \usebeamerfont{page number in head/foot}
       \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt
     }
-    \setbeamertemplate{navigation symbols}{}
     \linespread{1.2}\selectfont
     \titlegraphic{\vbox to 0pt{\includegraphics[height=0.5cm]{image/firmlogics_adjusted_transparent_320}\vss}}
     % \setbeamerfont{institute}{size=\tiny}
