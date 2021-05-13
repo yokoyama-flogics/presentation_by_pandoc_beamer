@@ -53,5 +53,32 @@ header-includes: |
     }{
       \end{origVerbatim}
     }
+    %
+    % Make each frame appear in the PDF toc.
+    % Refer https://tex.stackexchange.com/questions/17230/beamer-how-to-make-each-frame-appear-in-the-pdf-toc
+    % and https://tex.stackexchange.com/questions/66519/make-each-frame-not-slide-appear-in-the-pdf-bookmarks-with-beamer
+    \usepackage{bookmark}
+    \usepackage{etoolbox}
+    \makeatletter
+    % save the current definition of \beamer@@frametitle
+    \let\nobookmarkbeamer@@frametitle\beamer@@frametitle
+    % then patch it to do the bookmarks and/or TOC entries
+    \apptocmd{\beamer@@frametitle}{\only<1>{%
+      % keep this to add the frame title to the TOC at the "subsection level"
+      \addtocontents{toc}{\protect\beamer@subsectionintoc{\the\c@section}{0}{#1}{\the\c@page}{\the\c@part}%
+            {\the\beamer@tocsectionnumber}}%
+      % keep this line to add a bookmark that shows up in the PDF TOC at the subsection level
+      \bookmark[page=\the\c@page,level=3]{#1}%
+      }}%
+    {\message{** patching of \string\beamer@@frametitle succeeded **}}%
+    {\errmessage{** patching of \string\beamer@@frametitle failed **}}%
+
+    \pretocmd{\beamer@checknoslide}{%
+      % ensure the bookmark is not created if the slide is filtered out
+      \let\beamer@@frametitle\nobookmarkbeamer@@frametitle
+      }%
+    {\message{** patching of \string\beamer@checknoslide succeeded **}}%
+    {\errmessage{** patching of \string\beamer@checknoslide failed **}}%
+    \makeatother
     ```
 ...
