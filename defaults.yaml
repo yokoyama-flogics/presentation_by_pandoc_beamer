@@ -14,6 +14,11 @@ output-file: slides.tex
 standalone: true
 pdf-engine: xelatex
 
+# If you need an automatic \pause for each item.
+# incremental: true
+# Otherwise, you can \pause by '. . .'.  Refer "Inserting pauses" in
+# https://pandoc.org/MANUAL.html#slide-shows
+
 variables:
     colorlinks: true
     classoption:
@@ -23,6 +28,7 @@ variables:
         # refer https://texwiki.texjp.org/?BXjscls#f45df5c0
         # -pandoc
         - unicode
+        # - handout
     theme: Copenhagen
     colortheme: seahorse
     # navigation: frame
