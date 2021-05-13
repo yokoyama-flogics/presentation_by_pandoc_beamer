@@ -327,6 +327,22 @@ PowerPointのように、アニメーション効果を持つプレゼンテー�
 
 - [Pandoc Demos（Example 16: HTML slide shows）](https://pandoc.org/demos.html)
 
+## おまけ: Markdownだけでは記述できない場合
+
+```{=tex}
+Markdownの構文だけではうまく記述できず、\LaTeX のコードを直接埋め込みたい、という場合もあります。
+
+\begin{itemize}
+  \item 図表を特殊な配置にしたい場合
+  \item Beamerの機能に直接アクセスしたい場合、など
+\end{itemize}
+
+このスライドページは、\LaTeX のコードでBeamerを直接記述しています。
+ソースコードで御確認ください。
+
+なお、\LaTeX のverbatim環境などを使いたい場合は、フレームの開始を指示する\texttt{\#\#}行の末尾に、\texttt{\{.fragile\}}という記述が必要な場合があります。PandocやBeamerのマニュアルを御参考ください。
+```
+
 ## まとめ
 
 - 近年、技術文書を**Markdown**で書くことが流行しています。
