@@ -42,13 +42,15 @@ header-includes: |
     % Change code blocks font size
     % Also refer https://stackoverflow.com/questions/27000906/how-to-set-the-font-size-for-code-blocks-in-pandoc-markdown
     %   For syntax highlighting
-    \renewenvironment{Shaded}{\footnotesize}{}
+    \ifdefined\Shaded%
+      \renewenvironment{Shaded}{\footnotesize\linespread{1.0}\selectfont}{}%
+    \fi
     %   For no highlighting
     %   Refer https://tex.stackexchange.com/questions/116670/duplicating-environments
     \let\origVerbatim\verbatim
     \let\origendverbatim\endverbatim
     \renewenvironment{verbatim}{
-      \footnotesize
+      \footnotesize\linespread{1.0}\selectfont
       \begin{origVerbatim}
     }{
       \end{origVerbatim}
