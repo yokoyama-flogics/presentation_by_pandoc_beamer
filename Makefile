@@ -1,17 +1,18 @@
-INPUTFILES=slides.md defaults.yaml metadata.yaml
+DOCBASE=slides
+INPUTFILES=$(DOCBASE).md defaults.yaml metadata.yaml
 
 .PNONY: all png watch clean
 
-all: slides.pdf
+all: $(DOCBASE).pdf
 
-slides.pdf: slides.tex
+$(DOCBASE).pdf: ${DOCBASE}.tex
 	latexmk -use-make -pdf -xelatex $<
 
-slides.tex: $(INPUTFILES)
+$(DOCBASE).tex: $(INPUTFILES)
 	pandoc -d defaults.yaml
 
-png: slides.pdf
-	convert -density 300 slides.pdf -scale 800x output/presentation_by_pandoc_beamer_slide-%02d.png
+png: $(DOCBASE).pdf
+	convert -density 300 $(DOCBASE).pdf -scale 800x output/presentation_by_pandoc_beamer_slide-%02d.png
 
 watch:
 	fswatch -0 $(INPUTFILES) |	\
@@ -21,6 +22,6 @@ watch:
 	done
 
 clean:
-	rm -f slides.aux slides.log slides.nav slides.pdf slides.snm
-	rm -f slides.tex slides.toc slides.vrb
-	rm -f slides.fdb_latexmk slides.fls slides.xdv
+	rm -f $(DOCBASE).aux ${DOCBASE}.log ${DOCBASE}.nav ${DOCBASE}.pdf   \
+		$(DOCBASE).snm ${DOCBASE}.tex ${DOCBASE}.toc ${DOCBASE}.vrb \
+		$(DOCBASE).fdb_latexmk ${DOCBASE}.fls ${DOCBASE}.xd
