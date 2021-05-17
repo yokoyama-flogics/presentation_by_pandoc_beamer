@@ -4,6 +4,8 @@ author:
     - ファームロジックス　横山篤史（contact@flogics.com）
 date: 2021年5月13日
 
+# Refer https://pandoc.org/MANUAL.html
+# Also refer https://tex.stackexchange.com/questions/154528/how-to-change-the-background-color-and-border-of-a-pandoc-generated-blockquote
 header-includes: |
     ```{=latex}
     \usepackage{zxjatype}
