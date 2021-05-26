@@ -65,3 +65,4 @@ $ make
 ![slide 27](output/presentation_by_pandoc_beamer_slide-27.png)
 ![slide 28](output/presentation_by_pandoc_beamer_slide-28.png)
 ![slide 29](output/presentation_by_pandoc_beamer_slide-29.png)
+![slide 30](output/presentation_by_pandoc_beamer_slide-30.png)

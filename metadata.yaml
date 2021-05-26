@@ -1,8 +1,8 @@
 ---
-title: Markdownでプレゼンテーションをしよう（Pandoc編）
+title: Markdownでプレゼンテーションをしよう（Pandoc${}+{}$Beamer編）
 author:
     - ファームロジックス　横山篤史（contact@flogics.com）
-date: 2021年5月13日
+date: 2021年5月26日改訂
 
 header-includes: |
     ```{=latex}

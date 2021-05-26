@@ -201,6 +201,24 @@ Refer https://stackoverflow.com/questions/4823468/comments-in-markdown
 HTMLやLaTeXは面倒でも、これなら覚えられそうですね!
 （詳細なフォーマット例は[こちら](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)で見られます。）
 
+## 余談: 本来のmarkdownってどういう意味?
+
+筆者はずっと知りませんでした。
+
+あるとき、ウェブで「markdown calculator」とか検索していて、「なんか変だぞ」と気付いたのがきっかけです。
+
+::: block
+### markdownとは
+
+英語で「値下げ」という意味です
+
+:::
+
+つまり、markdown calculatorといえば、値下げ額の計算機、という意味になるのでした。
+
+英単語にお詳しい方には、当たり前の話かも知れませんね。
+私は知らずに、いずれネイティブスピーカーと話をして混乱するところでした。
+
 ## Markdownでプレゼン資料を作れないの?
 
 - TeXの世界では、かつてSliTeXと呼ばれるマクロパッケージがあり、硬派な技術者はマークアップ言語でプレゼンテーション資料（slide）を作っていました。（1990年頃?）
